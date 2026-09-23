@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #fdeef1;
+  color: #6a1e3b;
+  font-family: 'Lora', Georgia, serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .pill {
+    @apply inline-flex items-center justify-center rounded-full font-body font-medium text-white
+      transition-transform duration-200 ease-out hover:scale-105 active:scale-95
+      focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burgundy;
+  }
+  .field {
+    @apply w-full rounded-2xl border border-borderrose bg-[#fffdfa] px-4 py-3.5 font-body text-base
+      text-burgundy shadow-sm outline-none transition
+      focus:border-rosebtn focus:ring-2 focus:ring-rosebtn/30;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
