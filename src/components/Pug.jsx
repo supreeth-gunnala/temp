@@ -9,7 +9,7 @@ export default function Pug() {
     <div className="mx-auto h-[120px] w-[120px] overflow-hidden rounded-3xl bg-[#f3dcc4] shadow-md">
       {!failed ? (
         <img
-          src="/pug.jpg"
+          src={`${import.meta.env.BASE_URL}pug.jpg`}
           alt="a very funny pug"
           className="h-full w-full object-cover"
           onError={() => setFailed(true)}
